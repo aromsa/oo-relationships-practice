@@ -1,5 +1,45 @@
 require_relative '../config/environment.rb'
 
+#### GYM ####
+
+casey = Trainer.new("Casey", 50000)
+chloe = Trainer.new("Chloe", 60000)
+chris = Trainer.new("Chris", 60000)
+max = Trainer.new("Max", 50000)
+
+anna = Client.new("Anna", casey)
+christine = Client.new("Christine", casey)
+anton = Client.new("Anton", chloe)
+jo = Client.new("Jo", chloe)
+brad = Client.new("Brad", chris)
+steph = Client.new("Steph", max)
+anitha = Client.new("Anitha", max)
+
+dumbo = Location.new("DUMBO", 1000)
+soho = Location.new("SOHO", 2000)
+ps = Location.new("Park Slope", 400)
+ch = Location.new("Cobble Hill", 1500)
+
+TrainerLocation.new(chloe, ch)
+TrainerLocation.new(chris, dumbo)
+TrainerLocation.new(casey, ch)
+TrainerLocation.new(max, soho)
+TrainerLocation.new(casey, ps)
+TrainerLocation.new(chris, ps)
+TrainerLocation.new(chris, ch)
+
+
+
+
+
+
+
+
+
+
+
+
+
 #### CROWDFUNDING ####
 
 u1 = User.new("Anna")
@@ -43,7 +83,6 @@ london = Listing.new("London")
 tokyo = Listing.new("Tokyo")
 nyc = Listing.new("NYC")
 tokyo2 = Listing.new("Tokyo")
-
 
 trip1 = Trip.new(tashawn, tokyo)
 trip2 = Trip.new(dolly, paris)

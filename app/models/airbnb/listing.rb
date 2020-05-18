@@ -43,7 +43,7 @@ class Listing
       listing_count[listing] ||= 0
       listing_count[listing] += 1
     end
-  listing_count.invert.max&.last
+  listing_count.max_by{| key, value | value}[0]
   end
 end
 

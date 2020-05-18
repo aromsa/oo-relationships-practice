@@ -19,6 +19,10 @@ class Guest
     end
   end
 
+  def listings
+    trips.map {|t| t.listing}
+  end
+
   def trip_count
     trips.count
   end
