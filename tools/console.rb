@@ -1,5 +1,24 @@
 require_relative '../config/environment.rb'
 
+#### CROWDFUNDING ####
+
+casey2 = User.new("Casey")
+anton2 = User.new("Anton")
+brad2 = User.new("Brad")
+anitha2 = User.new("Anitha")
+
+food_bank = Project.new("Food Bank", 400, anton2)
+children = Project.new("Children", 1000, anton2)
+school = Project.new("School", 500, casey2)
+hospital = Project.new("Hospital", 10000, anton2)
+garden = Project.new("Garden", 10000, brad2)
+
+pledge1 = Pledge.new(food_bank, brad2, 300)
+pledge2 = Pledge.new(food_bank, anitha2, 200)
+pledge3 = Pledge.new(school, anton2, 600)
+pledge4 = Pledge.new(hospital, brad2, 10000)
+pledge5 = Pledge.new(school, anton2, 600)
+
 #### GYM ####
 
 casey = Trainer.new("Casey", 50000)
@@ -27,30 +46,6 @@ TrainerLocation.new(max, soho)
 TrainerLocation.new(casey, ps)
 TrainerLocation.new(chris, ps)
 TrainerLocation.new(chris, ch)
-
-
-
-
-
-
-
-
-
-
-
-
-
-#### CROWDFUNDING ####
-
-u1 = User.new("Anna")
-u2 = User.new("Brad")
-u3 = User.new("Anitha")
-
-pj1 = Project.new("ReciPlease", 1000, u1)
-pj2 = Project.new("Project A", 900, u2)
-pj3 = Project.new("Project B", 900, u3)
-
-pdg1 = Pledge.new(pj1, 100)
 
 #### LYFT ####
 
@@ -91,15 +86,6 @@ trip4 = Trip.new(yoan, london)
 trip5 = Trip.new(tashawn, london)
 trip6 = Trip.new(dolly, tokyo)
 trip7 = Trip.new(jeanmarie, tokyo)
-
-
-
-
-
-
-
-
-
 
 def reload
   load 'config/environment.rb'

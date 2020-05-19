@@ -1,31 +1,25 @@
 class Pledge
 
-  attr_accessor :amount, :project
+  attr_accessor :project, :user, :pledge_amount
 
   @@all = []
 
-  def initialize(project, amount)
+  def initialize(project, user, pledge_amount)
     @project = project
-    @amount = amount
+    @user = user
+    @pledge_amount = pledge_amount
+    Pledge.all << self
   end
 
   def self.all
     @@all
   end
 
-  
 
-  def user
-    Project.all.map do |p|
-      p.user
-    # binding.pry
-    end
-  end
 
 end
 
-# DONE #project
-        # returns the project associated with a particular pledge
 
-# #user
-# returns the user associated with a particular pledge
+# DONE - #project - returns the project associated with a particular pledge
+
+# DONE - #user - returns the user associated with a particular pledge
