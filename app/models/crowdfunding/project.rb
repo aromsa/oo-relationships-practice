@@ -39,6 +39,17 @@ class Project
     end
     project_backers.max_by{|k,v| v}[0]
   end
+
+  ##### Chaya's code counts only UNIQUE backers. ####
+  # def self.most_backers
+  #   Project.all.max_by do |project|
+  #       users = []
+  #       project.pledges.each do |pledge|
+  #       users << pledge.user
+  #       end
+  #       users.uniq.count
+  #   end
+  # end
   
 end
 
